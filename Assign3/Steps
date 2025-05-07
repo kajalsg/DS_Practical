@@ -1,0 +1,66 @@
+C:\Users\kajal>echo %MPJ_HOME%
+C:\mpj
+
+C:\Users\kajal>mpjrun.bat
+MPJ Express version 0.44
+
+mpjrun.[bat/sh] [options] class [args...]
+                (to execute a class)
+mpjrun.[bat/sh] [options] -jar jarfile [args...]
+                (to execute a jar file)
+
+where options include:
+   -np val            -- <# of cores>
+   -dev val           -- <multicore>
+   -dport val         -- <read from mpjexpress.conf>
+   -wdir val          -- $MPJ_HOME/bin
+   -mpjport val       -- Deprecated
+   -yarn              -- to run application using Hadoop YARN
+   -mxboardnum val    -- 0
+   -headnodeip val    -- ...
+   -psl val           -- 128Kbytes
+   -machinesfile val  -- machines
+   -debug val         -- 24500
+   -src val           -- false
+   -profile val       -- false
+   -h                 -- print this usage information
+   ...any JVM arguments...
+ Note: Value on the right in front of each option is the default value
+ Note: 'MPJ_HOME' variable must be set
+
+C:\Users\kajal>cd DS practical
+
+C:\Users\kajal\ds Practical>cd Assign3
+
+C:\Users\kajal\ds Practical\Assign3>javac -cp %MPJ_HOME%\lib\mpj.jar ArrSum.java
+
+C:\Users\kajal\ds Practical\Assign3>mpjrun.bat -np 4 -cp . ArrSum
+MPJ Express (0.44) is started in the multicore configuration
+Enter 20 elements
+Element 0        = 0
+Element 1        = 1
+Element 2        = 2
+Element 3        = 3
+Element 4        = 4
+Element 5        = 5
+Element 6        = 6
+Element 7        = 7
+Element 8        = 8
+Element 9        = 9
+Element 10       = 10
+Element 11       = 11
+Element 12       = 12
+Element 13       = 13
+Element 14       = 14
+Element 15       = 15
+Element 16       = 16
+Element 17       = 17
+Element 18       = 18
+Element 19       = 19
+Intermediate sum at process 0 is 10
+Intermediate sum at process 1 is 35
+Intermediate sum at process 3 is 85
+Intermediate sum at process 2 is 60
+Final sum : 190
+
+C:\Users\kajal\ds Practical\Assign3>
