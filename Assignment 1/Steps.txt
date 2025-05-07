@@ -1,0 +1,21 @@
+Step 2: Compile All Java Files
+Open the terminal/command prompt in that folder and run:
+javac *.java
+This will compile all the .java files and generate .class files.
+
+✅ Step 3: Start the RMI Registry
+In the same directory, open a new terminal/command prompt and run:
+
+start rmiregistry       (for Windows)
+rmiregistry &           (for Linux/macOS)
+
+
+✅ Step 4: Start the Server
+In a new terminal window, run:
+java Server
+You should see:
+server started!
+
+✅ Step 5: Run the Client
+In another terminal window, run:
+java Client

@@ -1,0 +1,32 @@
+1. Compile the IDL file
+This generates the necessary Java stubs and skeletons:
+idlj -fall ReverseModule.idl
+
+2. Compile all Java files
+javac *.java ReverseModule/*.java
+
+3. Start the ORB Daemon
+orbd -ORBInitialPort 1050 &
+
+4. Start the Server
+In another terminal (or command prompt window):
+java ReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost &
+
+You should see output like:
+Reverse Object Created
+Step 1
+Step 2
+Step 3
+Step 4
+Reverse Server Reading and Waiting...
+
+5. Run the Client
+In another terminal:
+java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+o/p:-
+Enter String:
+hello
+
+And the output should be:
+Server send: olleh

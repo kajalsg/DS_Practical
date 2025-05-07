@@ -1,0 +1,23 @@
+Python 3 installed
+
+python-dateutil library installed
+Install it via pip if not already installed:
+
+pip install python-dateutil
+🧠 Understanding the Setup
+server.py acts as the Clock Server (Master)
+
+client.py acts as the Client (Slave) that sends and receives time data
+
+🔁 Steps to Run
+1. Open Two Terminals
+2. Run the Server First
+In Terminal 1:
+
+
+python server.py
+This starts the clock server on localhost:8080.
+
+3. Run the Client
+In Terminal 2:
+python client.py
